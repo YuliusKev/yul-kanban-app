@@ -1,5 +1,5 @@
 'use client'
-import React, { useEffect, useState, FormEvent, ChangeEvent  } from "react";
+import { useEffect, useState, FormEvent, ChangeEvent  } from "react";
 import { useRouter } from 'next/navigation';
 import { useLayoutBoard, useDataCard } from "./components/dataObject"; 
 
@@ -47,7 +47,7 @@ export default function Home() {
   const [formModal, setFormModal]  = useState(false)
   const [detailModal, setDetailModal] = useState(false);
   
-  const [cards, setCards] = useState(cardData)
+  const [cards, setCards] = useState<dataCard[]>(cardData)
   const [dragElement, setDragElement] = useState<{id: number | null | undefined, card_id: string} | null>(null)
   const [name, setName] = useState('')
 
