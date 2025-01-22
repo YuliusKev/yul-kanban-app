@@ -13,7 +13,7 @@ git clone https://github.com/YuliusKev/yul-kanban-app.git
 then, install the dependencies:
 
 ```bash
-npm run dev
+npm install
 
 ```
 
