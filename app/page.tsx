@@ -1,5 +1,5 @@
 'use client'
-import React, { useEffect, useState, FormEvent, ChangeEvent, use  } from "react";
+import React, { useEffect, useState, FormEvent, ChangeEvent  } from "react";
 import { useRouter } from 'next/navigation';
 import { useLayoutBoard, useDataCard } from "./components/dataObject"; 
 
@@ -48,10 +48,10 @@ export default function Home() {
   const [detailModal, setDetailModal] = useState(false);
   
   const [cards, setCards] = useState(cardData)
-  const [dragElement, setDragElement] = useState<{id: any, card_id: string} | null>(null)
+  const [dragElement, setDragElement] = useState<{id: number | null | undefined, card_id: string} | null>(null)
   const [name, setName] = useState('')
 
-  const [allTeams, setAllTeams] = useState<String[]>([]);
+  const [allTeams, setAllTeams] = useState<string[]>([]);
   
 
   const [formData, setFormData] = useState<inputCard>({
@@ -97,7 +97,7 @@ export default function Home() {
     // }
   }
 
-  const handleDragChange = async (column_id: string, card_id: number | null) => {
+  const handleDragChange = async (column_id: string, card_id: number | null | undefined) => {
     try{
       const date = new Date
       console.log(card_id)
@@ -248,7 +248,7 @@ export default function Home() {
     setSubmitStatus('new');
   }
 
-  const updateTeam = (status_name: String, status_index: number) => {
+  const updateTeam = (status_name: string, status_index: number) => {
     if(allTeams.includes(status_name)){
       setAllTeams(prevTeam => prevTeam.filter(item => item !== status_name))
     } else {
