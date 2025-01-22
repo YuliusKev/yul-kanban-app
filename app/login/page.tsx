@@ -20,7 +20,7 @@ const Login = () => {
                 <h2 className="text-2xl font-bold text-center mb-4">Login Kanban</h2>
                 <form onSubmit={handleSubmit}>
                     <div className="mb-4">
-                        <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
+                        <label htmlFor="email" className="block text-sm font-medium text-gray-700">Username</label>
                         <input
                             type="text"
                             id="username"
