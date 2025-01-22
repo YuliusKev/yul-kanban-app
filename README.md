@@ -2,7 +2,22 @@ HELLO! This is a Kanban app that i make to help you organize your task
 
 ## Getting Started
 
-First, run the development server:
+First, clone this git 
+
+
+```bash
+git clone https://github.com/YuliusKev/yul-kanban-app.git
+
+```
+
+then, install the dependencies:
+
+```bash
+npm run dev
+
+```
+
+finally, run the development server:
 
 ```bash
 npm run dev
